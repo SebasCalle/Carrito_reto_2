@@ -1,11 +1,11 @@
-var controllers=angular.module("Maincontrollers",["MainServices"]);
+var controllers=angular.module("Maincontrollers",[]);
 
   
 controllers
 .controller("ProductsController",["ShopSesion",operaciones])
 .controller("carritoCtrl",process)
 .controller("loginCtrl",configlogin)
-.controller("RegisterCtrl",configregister);
+
 
 
 
@@ -51,21 +51,6 @@ $scope.add = function(producto) {
     ShopSesion.add(producto);
 }
 
-
-
-  $scope.review={};
-  $scope.formVisibility=false;
-
-  $scope.addReview = function(producto){
-
-    producto.reviews.push($scope.review);
-
-    $scopereview= {};
-    $scope.formVisibility=false;
-  }
-
-
-
   $scope.Showform=function(){
     $scope.formVisibility=true;
   }
@@ -83,7 +68,8 @@ $scope.incrementLikes =function (producto){
 }
 
 function process(ShopSesion){
-  $scope.newproducts = ShopSesion.getProducts;
+  
+
   $scope.borrar= function(producto){
     var i;
       var len= $scope.newproducts.length;
