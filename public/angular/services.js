@@ -7,7 +7,7 @@ services
 
 function shop ($scope){
 
-	var newproductos=[];
+
 
      isEmpty=function(product,newproductos){
 		 var i;
@@ -20,7 +20,6 @@ function shop ($scope){
 			 return false;
 			};
 
-
         add:function(product){
          if(!this.isEmpty(producto, ShopSesion.newproductos)){
 	     // $scope.newproducto.cantidad = 1;
@@ -30,7 +29,7 @@ function shop ($scope){
 
      } 
      }
-   
+      return  ShopSesion;
 
     
 
