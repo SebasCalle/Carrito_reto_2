@@ -20,12 +20,6 @@ function shop ($scope){
 			 return false;
 			};
 
-	var ShopSesion = {
-
-		getProducts: function(){
-			return newproductos;
-		},
-
 
         add:function(product){
          if(!this.isEmpty(producto, ShopSesion.newproductos)){
@@ -36,7 +30,7 @@ function shop ($scope){
 
      } 
      }
-      return  ShopSesion;
+   
 
     
 
